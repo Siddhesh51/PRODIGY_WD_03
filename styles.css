@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a020e;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #f7f0f0;
+}
+
+/* Game Board Styles */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Cell Styles */
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+    font-weight: bold;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    animation: cell-rainbow 2s infinite alternate;
+}
+
+@keyframes cell-rainbow {
+    0% { box-shadow: 0 0 10px #ff0000; }
+    16% { box-shadow: 0 0 10px #ff7f00; }
+    32% { box-shadow: 0 0 10px #ffff00; }
+    48% { box-shadow: 0 0 10px #00ff00; }
+    64% { box-shadow: 0 0 10px #0000ff; }
+    80% { box-shadow: 0 0 10px #4b0082; }
+    100% { box-shadow: 0 0 10px #9400d3; }
+}
+
+/* Player X Styles */
+.cell.x {
+    color: #f51bb4; /* Red */
+}
+
+/* Player O Styles */
+.cell.o {
+    color: #e69214; /* Blue */
+}
+
+/* Reset Button Styles */
+#reset-button {
+    font-size: 1.25rem;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background-color: #eb2b2b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    animation: rainbow-glow 2s infinite alternate;
+}
+
+#reset-button:hover {
+    background-color: #eb2b2b;
+}
+
+#reset-button:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}
+
+#reset-button {
+    animation: rainbow-glow 2s infinite alternate;
+}
+#winning-message {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ffffff; /* White */
+ 
+}
